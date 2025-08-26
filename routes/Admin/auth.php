@@ -19,6 +19,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
         Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
         Route::get('users', [AdminController::class, 'users'])->name('users');
-        Route::delete('users/{id}', [AdminController::class, 'deleteUser'])->name('users.delete');
+        Route::delete('users/{user}', [AdminController::class, 'deleteUser'])->name('users.delete');
     });
 });

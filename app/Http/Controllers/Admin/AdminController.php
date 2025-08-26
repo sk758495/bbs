@@ -20,10 +20,13 @@ class AdminController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
-    public function deleteUser($id)
+    public function deleteUser(User $user)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
-        return redirect()->route('admin.users')->with('success', 'User deleted successfully');
+        try {
+            $user->delete();
+            return redirect()->route('admin.users')->with('success', 'User deleted successfully');
+        } catch (\Exception $e) {
+            return redirect()->route('admin.users')->with('error', 'Failed to delete user. Please try again.');
+        }
     }
 }
