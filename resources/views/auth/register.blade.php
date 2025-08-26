@@ -72,7 +72,8 @@
                             <div class="mb-3">
                                 <label for="mobile" class="form-label">Mobile Number</label>
                                 <input id="mobile" type="text" class="form-control" name="mobile"
-                                    value="{{ old('mobile') }}" required>
+                                    value="{{ old('mobile') }}" placeholder="Enter mobile number without +91" required>
+                                <small class="form-text text-muted">Please enter mobile number without +91 (e.g., 9876543210)</small>
                                 @error('mobile')
                                     <div class="text-danger mt-1">{{ $message }}</div>
                                 @enderror
