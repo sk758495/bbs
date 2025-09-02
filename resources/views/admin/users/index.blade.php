@@ -44,6 +44,9 @@
                                     <td>{{ $user->mobile ?? 'N/A' }}</td>
                                     <td>{{ $user->created_at->format('M d, Y') }}</td>
                                     <td>
+                                        <a href="{{ route('admin.users.projects', $user->id) }}" class="btn btn-info btn-sm me-2">
+                                            <i class="bi bi-folder"></i> Projects
+                                        </a>
                                         <form action="{{ route('admin.users.delete', $user->id) }}" method="POST" 
                                               onsubmit="return confirm('Are you sure you want to delete this user?')" class="d-inline">
                                             @csrf

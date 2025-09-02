@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\ProjectDetail;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -28,5 +29,11 @@ class AdminController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('admin.users')->with('error', 'Failed to delete user. Please try again.');
         }
+    }
+
+    public function userProjects(User $user)
+    {
+        $projects = ProjectDetail::where('user_id', $user->id)->latest()->paginate(10);
+        return view('admin.users.projects', compact('user', 'projects'));
     }
 }
