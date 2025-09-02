@@ -57,7 +57,7 @@
         <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
             <i class="bi bi-speedometer2"></i> Dashboard
         </a>
-        <a href="#"><i class="bi bi-box-seam"></i> Products</a>
+        {{-- <a href="#"><i class="bi bi-box-seam"></i> Products</a> --}}
         <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users*') ? 'active' : '' }}">
             <i class="bi bi-people"></i> Users
         </a>
