@@ -16,6 +16,17 @@
 
     <!-- Bootstrap Icons (for eye icon) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        .btn-danger {
+            background-color: #db4437;
+            border-color: #db4437;
+        }
+        .btn-danger:hover {
+            background-color: #c23321;
+            border-color: #c23321;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -114,7 +125,18 @@
                                 <button type="submit" class="btn btn-primary">Register</button>
                             </div>
                         </form>
-                        <hr class="my-4">
+                        
+                        <!-- Divider -->
+                        <div class="text-center my-3">
+                            <span class="text-muted">or</span>
+                        </div>
+
+                        <!-- Google Register Button -->
+                        <div class="d-grid mb-3">
+                            <a href="{{ route('google.redirect') }}" class="btn btn-danger">
+                                <i class="bi bi-google"></i> Continue with Google
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
