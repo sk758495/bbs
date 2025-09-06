@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EmployeeManagement\ProjectDetailController;
@@ -16,16 +17,6 @@ Route::get('/', function () {
 
 require __DIR__.'/auth.php';
 require __DIR__.'/Admin/auth.php';
-
-// Test route for Google OAuth config
-Route::get('/test-google-config', function () {
-    return response()->json([
-        'google_client_id' => config('services.google.client_id'),
-        'google_redirect' => config('services.google.redirect'),
-        'app_url' => config('app.url'),
-        'env' => config('app.env'),
-    ]);
-});
 
 
 use App\Http\Controllers\Auth\OtpVerificationController;
@@ -50,3 +41,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/projects/export/excel', [ProjectDetailController::class, 'exportExcel'])->name('project.export.excel');
     Route::get('/projects/{id}/export/excel', [ProjectDetailController::class, 'exportSingleProject'])->name('project.export.single');
 });
+
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

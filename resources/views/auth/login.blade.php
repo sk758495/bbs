@@ -56,10 +56,6 @@
     @if (session('status'))
       <div class="alert alert-success mb-3">{{ session('status') }}</div>
     @endif
-    
-    @if (session('error'))
-      <div class="alert alert-danger mb-3">{{ session('error') }}</div>
-    @endif
 
     <!-- Login Form -->
     <form method="POST" action="{{ route('login') }}">
@@ -112,25 +108,12 @@
       </div>
     </form>
 
-    <!-- Divider -->
-    <div class="text-center mb-3">
-      <span class="text-muted">or</span>
-    </div>
+    <a href="{{ route('google.login') }}" 
+   class="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600">
+   <i class="fab fa-google"></i> Login with Google
+</a>
 
-    <!-- Google Login Button -->
-    <div class="d-grid mb-3">
-      <a href="{{ route('google.redirect') }}" class="btn btn-danger">
-        <i class="bi bi-google"></i> Continue with Google
-      </a>
-    </div>
-
-    <!-- Register Link -->
-    <div class="text-center">
-      <span class="text-muted">Don't have an account?</span>
-      <a href="{{ route('register') }}" class="text-decoration-none">Register here</a>
-    </div>
-
-  </div>
+   
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
