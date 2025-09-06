@@ -56,6 +56,10 @@
     @if (session('status'))
       <div class="alert alert-success mb-3">{{ session('status') }}</div>
     @endif
+    
+    @if (session('error'))
+      <div class="alert alert-danger mb-3">{{ session('error') }}</div>
+    @endif
 
     <!-- Login Form -->
     <form method="POST" action="{{ route('login') }}">
