@@ -73,7 +73,8 @@
                                 <label for="mobile" class="form-label">Mobile Number</label>
                                 <input id="mobile" type="text" class="form-control" name="mobile"
                                     value="{{ old('mobile') }}" placeholder="Enter mobile number without +91" required>
-                                <small class="form-text text-muted">Please enter mobile number without +91 (e.g., 9876543210)</small>
+                                <small class="form-text text-muted">Please enter mobile number without +91 (e.g.,
+                                    9876543210)</small>
                                 @error('mobile')
                                     <div class="text-danger mt-1">{{ $message }}</div>
                                 @enderror
@@ -115,6 +116,14 @@
                             </div>
                         </form>
                         <hr class="my-4">
+                        <div>
+                            <a href="{{ route('google.login') }}"
+                                class="inline-flex items-center gap-2 px-4 py-2 bg-red-500 text-black rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 active:bg-red-700 transition duration-150 ease-in-out"
+                                aria-label="Login with Google">
+                                <i class="fab fa-google text-white"></i>
+                                <span>Login with Google</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

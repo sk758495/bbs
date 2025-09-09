@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
             display: flex;
             align-items: center;
         }
+
         .welcome-card {
             background: white;
             border-radius: 16px;
@@ -20,6 +22,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -27,7 +30,7 @@
                 <div class="welcome-card text-center">
                     <h1 class="mb-4">🏢 BBS Perfect Authentication System</h1>
                     <p class="lead mb-4">Choose your login portal</p>
-                    
+
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="card h-100">
@@ -43,14 +46,17 @@
                             <div class="card h-100">
                                 <div class="card-body">
                                     <h5 class="card-title">🏢 Admin Portal</h5>
-                                    <p class="card-text">Admin login with dual authentication (Password/OTP)</p>
-                                    <a href="{{ route('admin.login') }}" class="btn btn-success">Admin Login</a>
-                                    <a href="{{ route('admin.register') }}" class="btn btn-outline-success">Admin Register</a>
+                                    <p class="card-text">Admin login with (Password/OTP)</p>
+                                    <div class="display-flex" style="display: flex; gap: 10px;">
+                                        <a href="{{ route('admin.login') }}" class="btn btn-success">Admin Login</a>
+                                        <a href="{{ route('admin.register') }}" class="btn btn-outline-success">Admin
+                                            Register</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     {{-- <div class="mt-4">
                         <h6>Test Credentials:</h6>
                         <small class="text-muted">
@@ -63,4 +69,5 @@
         </div>
     </div>
 </body>
+
 </html>
