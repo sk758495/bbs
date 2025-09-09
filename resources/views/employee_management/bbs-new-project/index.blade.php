@@ -110,7 +110,7 @@
 
 <body>
     @include('employee_management.components.sidebar')
-
+    
     <div class="main-content">
         @include('employee_management.components.navbar')
 
@@ -250,6 +250,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
         <script src="{{ asset('user/js/side-function.js') }}"></script>
     </div>
+
 </body>
 
 </html>
