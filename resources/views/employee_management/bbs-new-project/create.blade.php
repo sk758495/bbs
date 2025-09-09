@@ -18,15 +18,24 @@
         <input type="text" value="{{ Auth::user()->name }}" class="form-control" disabled>
     </div>
 
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <label class="form-label"><i class="bi bi-hash"></i> Structure No.</label>
-            <input type="text" name="structure_no" class="form-control" placeholder="STR-001" required>
-        </div>
-        <div class="col-md-6 mb-3">
-            <label class="form-label"><i class="bi bi-receipt"></i> Bill No.</label>
-            <input type="text" name="bill_no" class="form-control" placeholder="BILL-001" required>
-        </div>
+    <div class="mb-3">
+        <label class="form-label"><i class="bi bi-building"></i> Contractor Name</label>
+        <input type="text" name="contractor_name" class="form-control" placeholder="Enter contractor name" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><i class="bi bi-person-gear"></i> Consultant Name</label>
+        <input type="text" name="consultant_name" class="form-control" placeholder="Enter consultant name" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><i class="bi bi-person-badge"></i> Client Name</label>
+        <input type="text" name="client_name" class="form-control" placeholder="Enter client name" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><i class="bi bi-receipt"></i> Bill No.</label>
+        <input type="text" name="bill_no" class="form-control" placeholder="BILL-001" required>
     </div>
 
     <div class="mb-3">

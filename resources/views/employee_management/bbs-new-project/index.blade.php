@@ -12,8 +12,10 @@
                 <th><i class="bi bi-hash"></i> ID</th>
                 <th><i class="bi bi-building"></i> Project</th>
                 <th class="d-none d-md-table-cell"><i class="bi bi-person"></i> Engineer</th>
-                <th class="d-none d-lg-table-cell"><i class="bi bi-diagram-3"></i> Structure</th>
-                <th class="d-none d-lg-table-cell"><i class="bi bi-receipt"></i> Bill No.</th>
+                <th class="d-none d-lg-table-cell"><i class="bi bi-building"></i> Contractor</th>
+                <th class="d-none d-xl-table-cell"><i class="bi bi-person-gear"></i> Consultant</th>
+                <th class="d-none d-lg-table-cell"><i class="bi bi-person-badge"></i> Client</th>
+                <th class="d-none d-xl-table-cell"><i class="bi bi-receipt"></i> Bill No.</th>
                 <th class="d-none d-xl-table-cell"><i class="bi bi-tools"></i> BBS For</th>
                 <th class="d-none d-xl-table-cell"><i class="bi bi-layers"></i> Floor</th>
                 <th class="d-none d-xl-table-cell"><i class="bi bi-file-earmark"></i> Drawing</th>
@@ -32,8 +34,10 @@
                         <small class="text-muted d-md-none">{{ $project->user->name ?? 'N/A' }}</small>
                     </td>
                     <td class="d-none d-md-table-cell">{{ $project->user->name ?? 'N/A' }}</td>
-                    <td class="d-none d-lg-table-cell">{{ $project->structure_no }}</td>
-                    <td class="d-none d-lg-table-cell">{{ $project->bill_no }}</td>
+                    <td class="d-none d-lg-table-cell">{{ $project->contractor_name }}</td>
+                    <td class="d-none d-xl-table-cell">{{ $project->consultant_name }}</td>
+                    <td class="d-none d-lg-table-cell">{{ $project->client_name }}</td>
+                    <td class="d-none d-xl-table-cell">{{ $project->bill_no }}</td>
                     <td class="d-none d-xl-table-cell">{{ $project->bbs_for }}</td>
                     <td class="d-none d-xl-table-cell">{{ $project->floor }}</td>
                     <td class="d-none d-xl-table-cell">{{ $project->reference_drawing }}</td>
@@ -61,7 +65,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="12" class="text-center py-5">
+                    <td colspan="14" class="text-center py-5">
                         <div class="text-muted">
                             <i class="bi bi-inbox display-1"></i>
                             <h5 class="mt-3">No projects found</h5>

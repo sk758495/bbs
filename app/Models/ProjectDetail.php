@@ -7,16 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class ProjectDetail extends Model
 {
     protected $fillable = [
-    'project_name',
-    'user_id',
-    'structure_no',
-    'bill_no',
-    'bbs_for',
-    'floor',
-    'reference_drawing',
-    'approved_by',
-    'total_rf_weight',
-];
+        'project_name',
+        'user_id',
+        'contractor_name',
+        'consultant_name',
+        'client_name',
+        'bill_no',
+        'bbs_for',
+        'floor',
+        'reference_drawing',
+        'approved_by',
+        'total_rf_weight',
+    ];
 
 public function user()
 {

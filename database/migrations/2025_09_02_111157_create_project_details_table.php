@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id(); // This is your auto revision number ID
             $table->string('project_name');
             $table->unsignedBigInteger('user_id'); // Reference to engineer (logged-in user)
-            $table->string('structure_no');
+            $table->string('contractor_name');
+            $table->string('consultant_name');
+            $table->string('client_name');
             $table->string('bill_no');
             $table->string('bbs_for');
             $table->string('floor');

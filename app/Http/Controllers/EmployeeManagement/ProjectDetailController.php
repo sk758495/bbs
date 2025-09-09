@@ -35,7 +35,9 @@ class ProjectDetailController extends Controller
     {
         $request->validate([
             'project_name' => 'required|string',
-            'structure_no' => 'required|string',
+            'contractor_name' => 'required|string',
+            'consultant_name' => 'required|string',
+            'client_name' => 'required|string',
             'bill_no' => 'required|string',
             'bbs_for' => 'required|string',
             'floor' => 'required|string',
@@ -47,7 +49,9 @@ class ProjectDetailController extends Controller
         ProjectDetail::create([
             'project_name' => $request->project_name,
             'user_id' => Auth::id(),
-            'structure_no' => $request->structure_no,
+            'contractor_name' => $request->contractor_name,
+            'consultant_name' => $request->consultant_name,
+            'client_name' => $request->client_name,
             'bill_no' => $request->bill_no,
             'bbs_for' => $request->bbs_for,
             'floor' => $request->floor,
@@ -75,7 +79,9 @@ class ProjectDetailController extends Controller
         
         $request->validate([
             'project_name' => 'required|string',
-            'structure_no' => 'required|string',
+            'contractor_name' => 'required|string',
+            'consultant_name' => 'required|string',
+            'client_name' => 'required|string',
             'bill_no' => 'required|string',
             'bbs_for' => 'required|string',
             'floor' => 'required|string',

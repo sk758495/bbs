@@ -21,7 +21,9 @@
                         <tr>
                             <th>ID</th>
                             <th>Project Name</th>
-                            <th>Structure No.</th>
+                            <th>Contractor</th>
+                            <th>Consultant</th>
+                            <th>Client</th>
                             <th>Bill No.</th>
                             <th>BBS For</th>
                             <th>Floor</th>
@@ -37,7 +39,9 @@
                                     <div class="fw-bold">{{ $project->project_name }}</div>
                                     <small class="text-muted">{{ $project->reference_drawing }}</small>
                                 </td>
-                                <td>{{ $project->structure_no }}</td>
+                                <td>{{ $project->contractor_name }}</td>
+                                <td>{{ $project->consultant_name }}</td>
+                                <td>{{ $project->client_name }}</td>
                                 <td>{{ $project->bill_no }}</td>
                                 <td>{{ $project->bbs_for }}</td>
                                 <td>{{ $project->floor }}</td>
